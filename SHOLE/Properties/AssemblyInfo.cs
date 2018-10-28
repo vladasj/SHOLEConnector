@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SHOLE")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Interface to SH OLE https://github.com/vladasj/SHOLEConnector")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("itworks")]
 [assembly: AssemblyProduct("SHOLE")]
