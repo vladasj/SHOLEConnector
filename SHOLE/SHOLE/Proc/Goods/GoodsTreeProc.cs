@@ -4,7 +4,7 @@ using SHOLE.Execute;
 namespace SHOLE.Procs
 {
     [Meta.SHProcMeta(Name = "GoodsTree")]
-    public class GoodsTreeProc : Execute.SHProc
+    public partial class GoodsTreeProc : Execute.SHProc
     {
         [SHDataSetMeta(DSIndex = 0, IsInput = true)]
         public GoodsTreeProcInputDS input { get; set; } = new GoodsTreeProcInputDS();
@@ -14,14 +14,14 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 0)]
-    public class GoodsTreeProcInputDS
+    public partial class GoodsTreeProcInputDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "209.2.0")]
         public int? goodstree_parent_rid { get; set; }
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public class GoodsTreeProcOutputDS
+    public partial class GoodsTreeProcOutputDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "209.1.0")]
         public uint goodstree_rid { get; set; }

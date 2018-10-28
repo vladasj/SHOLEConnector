@@ -4,14 +4,14 @@ using SHOLE.Execute;
 namespace SHOLE.Procs
 {
     [Meta.SHProcMeta(Name = "CmTree")]
-    public class CmTreeProc : Execute.SHProc
+    public partial class CmTreeProc : Execute.SHProc
     {
         [SHDataSetMeta(DSIndex = 1)]
         public SHDataSet<CmTreeProcOutputDS> result { get; set; } = new SHDataSet<CmTreeProcOutputDS>();
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public class CmTreeProcOutputDS
+    public partial class CmTreeProcOutputDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "201.1.0")]
         public uint cm_tree_rid { get; set; }

@@ -5,7 +5,7 @@ using SHOLE.Execute;
 namespace SHOLE.Procs
 {
     [Meta.SHProcMeta(Name = "CmList")]
-    public class CmListProc : Execute.SHProc
+    public partial class CmListProc : Execute.SHProc
     {
         [SHDataSetMeta(DSIndex = 0, IsInput = true)]
         public CmListProcInputDS input { get; set; }
@@ -15,7 +15,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 0)]
-    public class CmListProcInputDS
+    public partial class CmListProcInputDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "0.9.0")]
         public DateTime startDate { get; set; }
@@ -28,7 +28,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public class CmListProcOutputDS1
+    public partial class CmListProcOutputDS1
     {
         [SHDataSetPropertyMeta(PropertyCode = "0.1.0")]
         public DateTime cm_date { get; set; }

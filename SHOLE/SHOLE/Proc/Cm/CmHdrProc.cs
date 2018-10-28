@@ -5,7 +5,7 @@ using SHOLE.Execute;
 namespace SHOLE.Procs
 {
     [Meta.SHProcMeta(Name = "CmHdr")]
-    public class CmHdrProc: Execute.SHProc
+    public partial class CmHdrProc: Execute.SHProc
     {
         [SHDataSetMeta(DSIndex = 0, IsInput = true)]
         public CmHdrProcInputDS input { get; set; }
@@ -24,7 +24,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 0)]
-    public class CmHdrProcInputDS
+    public partial class CmHdrProcInputDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "200.1.0")]
         public int cm_base_rid { get; set; }
@@ -37,7 +37,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public class CmHdrProcOutputDS1
+    public partial class CmHdrProcOutputDS1
     {
         [SHDataSetPropertyMeta(PropertyCode = "200.1.0")]
         public uint cm_hdr_rid { get; set; }
@@ -92,7 +92,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 2)]
-    public class CmHdrProcOutputDS2
+    public partial class CmHdrProcOutputDS2
     {
         [SHDataSetPropertyMeta(PropertyCode = "202.1.10")]
         public uint cm_version_rid { get; set; }
@@ -106,7 +106,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 3)]
-    public class CmHdrProcOutputDS3
+    public partial class CmHdrProcOutputDS3
     {
         [SHDataSetPropertyMeta(PropertyCode = "202.1.0")]
         public int cm_hdr_rid { get; set; }
@@ -125,7 +125,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 4)]
-    public class CmHdrProcOutputDS4
+    public partial class CmHdrProcOutputDS4
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "203.1.0")]

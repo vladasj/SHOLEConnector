@@ -5,7 +5,7 @@ using SHOLE.Execute;
 namespace SHOLE.Procs
 {
     [SHProcMeta(Name = "GoodsBase")]
-    public class GoodsBaseProc : SHProc
+    public partial class GoodsBaseProc : SHProc
     {
         [SHDataSetMeta(DSIndex = 0, IsInput = true)]
         public GoodsBaseInputDS input { get; set; }
@@ -36,7 +36,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 0)]
-    public class GoodsBaseInputDS
+    public partial class GoodsBaseInputDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "210.1.0")]
         public int goods_rid { get; set; }
@@ -46,7 +46,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public class GoodsBaseOutputDS1
+    public partial class GoodsBaseOutputDS1
     {
         [SHDataSetPropertyMeta(PropertyCode = "210.1.0")]
         public uint goods_rid { get; set; }
@@ -158,7 +158,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 2)]
-    public class GoodsBaseOutputDS2
+    public partial class GoodsBaseOutputDS2
     {
         [SHDataSetPropertyMeta(PropertyCode = "206.1.0")]
         public uint goods_munit_rid { get; set; }
@@ -186,7 +186,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 3)]
-    public class GoodsBaseOutputDS3
+    public partial class GoodsBaseOutputDS3
     {
         [SHDataSetPropertyMeta(PropertyCode = "102.1.0")]
         public uint corr_base_rid { get; set; }
@@ -202,7 +202,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 4)]
-    public class GoodsBaseOutputDS4
+    public partial class GoodsBaseOutputDS4
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "214.1.0")]
@@ -219,7 +219,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 5)]
-    public class GoodsBaseOutputDS5
+    public partial class GoodsBaseOutputDS5
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "200.1.0")]
@@ -239,7 +239,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 6)]
-    public class GoodsBaseOutputDS6
+    public partial class GoodsBaseOutputDS6
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "217.1.0")]
@@ -250,7 +250,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 7)]
-    public class GoodsBaseOutputDS7
+    public partial class GoodsBaseOutputDS7
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "217.1.0")]
@@ -261,7 +261,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 8)]
-    public class GoodsBaseOutputDS8
+    public partial class GoodsBaseOutputDS8
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "245.1.0")]
