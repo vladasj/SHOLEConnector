@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>itworks.SHOLE</id>
-    <version>$version$</version>
+    <version>0.2.3</version>
     <title>$title$</title>
     <authors>zv</authors>
     <owners>itworks</owners>
@@ -12,4 +12,8 @@
     <copyright>Copyright 2018</copyright>
     <tags>SH4</tags>
   </metadata>
+  <files>
+    <file src="bin\release\shole.dll" target="lib\SHOLE\"/>
+    <file src="bin\Release\MIDAS.dll" target="lib\"/>
+  </files>
 </package>

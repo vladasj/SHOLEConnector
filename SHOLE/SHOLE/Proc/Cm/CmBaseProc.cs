@@ -3,11 +3,11 @@ using SHOLE.Execute;
 
 namespace SHOLE.Procs
 {
-    [Meta.SHProcMeta(Name = "CmBase")]
-    public partial class CmBaseProc : Execute.SHProc
+    [SHProcMeta(Name = "CmBase")]
+    public partial class CmBaseProc : SHProc
     {
         [SHDataSetMeta(DSIndex = 0, IsInput = true)]
-        public CmBaseProcInputDS input { get; set; }
+        public CmBaseProcInputDS Input { get; set; }
 
         [SHDataSetMeta(DSIndex = 1)]
         public SHDataSet<CmBaseProcOutputDS> result { get; set; } = new SHDataSet<CmBaseProcOutputDS>();

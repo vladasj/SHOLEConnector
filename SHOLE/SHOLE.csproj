@@ -70,7 +70,14 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SHOLE.csproj.nuspec" />
+    <None Include="SHOLE.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MIDAS.DLL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

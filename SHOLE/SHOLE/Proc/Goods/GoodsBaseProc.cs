@@ -4,7 +4,7 @@ using SHOLE.Execute;
 
 namespace SHOLE.Procs
 {
-    [SHProcMeta(Name = "GoodsBase")]
+    [SHProcMeta(Name = "GoodsBase")] 
     public partial class GoodsBaseProc : SHProc
     {
         [SHDataSetMeta(DSIndex = 0, IsInput = true)]

@@ -1,11 +1,6 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
+﻿using SHOLE.Meta;
+using System;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using SHOLE.Meta;
 
 namespace SHOLE.Execute
 {
@@ -22,9 +17,13 @@ namespace SHOLE.Execute
             _procMeta = new ProcMeta(this.GetType());
         }
 
-        public bool Execute()
+        public string Execute()
         {
             _indQuery = SHOLEConnector.CurrentConnector.ShConnector.pr_CreateProc(_procMeta.Name);
+            if (_indQuery < 0)
+            {
+                return SHOLEConnector.CurrentConnector.ShConnector.GetExcMessage();
+            }
             foreach (var inputDataSet in _procMeta.InputDataSetMetas)
             {
                 foreach (var inputDataSetProperty in inputDataSet.Value.Propertyes)
@@ -35,7 +34,7 @@ namespace SHOLE.Execute
                     {
                         var convertedValue = ((DateTime)value).ConvertDate();
                         SHOLEConnector.CurrentConnector.ShConnector.pr_SetValByName(_indQuery, inputDataSet.Value.DSIndex,
-                            inputDataSetProperty.Value, (int)convertedValue);
+                            inputDataSetProperty.Value, convertedValue);
                     }
                     else if (value is string)
                     {
@@ -64,7 +63,7 @@ namespace SHOLE.Execute
                 typeInfo.GetProperty("DSIndex").SetValue(dataSet, outputDataSet.Value.DSIndex);
             }
 
-            return true;
+            return "";
         }
 
         ~SHProc()

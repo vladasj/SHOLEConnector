@@ -22,13 +22,13 @@ namespace StoreOLE
             SHOLEConnector.CurrentConnector.Connect();
 
             var treeProcDS = new CmTreeProc();
-            treeProcDS.Execute();
+            var error = treeProcDS.Execute();
             foreach (var element in treeProcDS.result.Take(3))
             {
                 Console.WriteLine($"TREE - name:{element.cm_tree_name} rid:{element.cm_tree_rid}");
                 var cmBaseProcDS = new CmBaseProc()
                 {
-                    input = new CmBaseProcInputDS()
+                    Input = new CmBaseProcInputDS()
                     {
                         cm_tree_rid = (int)element.cm_tree_rid
                     }
