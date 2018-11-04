@@ -11,7 +11,7 @@ namespace SHOLE.Procs
         public CmListProcInputDS input { get; set; }
 
         [SHDataSetMeta(DSIndex = 2)]
-        public SHDataSet<CmListProcOutputDS1> output1 { get; set; } = new SHDataSet<CmListProcOutputDS1>();
+        public SHDataSet<CmListDS> output1 { get; set; } = new SHDataSet<CmListDS>();
     }
 
     [SHDataSetMeta(DSIndex = 0)]
@@ -28,7 +28,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public partial class CmListProcOutputDS1
+    public partial class CmListDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "0.1.0")]
         public DateTime cm_date { get; set; }

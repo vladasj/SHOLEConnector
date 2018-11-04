@@ -11,28 +11,28 @@ namespace SHOLE.Procs
         public GoodsBaseInputDS input { get; set; }
 
         [SHDataSetMeta(DSIndex = 1)]
-        public SHDataSet<GoodsBaseOutputDS1> goods_attr { get; set; } = new SHDataSet<GoodsBaseOutputDS1>();
+        public SHDataSet<GoodsBaseAttrsDS> goods_attr { get; set; } = new SHDataSet<GoodsBaseAttrsDS>();
 
         [SHDataSetMeta(DSIndex = 2)]
-        public SHDataSet<GoodsBaseOutputDS2> units { get; set; } = new SHDataSet<GoodsBaseOutputDS2>();
+        public SHDataSet<GoodsBaseUnitsDS> units { get; set; } = new SHDataSet<GoodsBaseUnitsDS>();
 
         [SHDataSetMeta(DSIndex = 3)]
-        public SHDataSet<GoodsBaseOutputDS3> corr { get; set; } = new SHDataSet<GoodsBaseOutputDS3>();
+        public SHDataSet<GoodsBaseCorrDS> corr { get; set; } = new SHDataSet<GoodsBaseCorrDS>();
 
         [SHDataSetMeta(DSIndex = 4)]
-        public SHDataSet<GoodsBaseOutputDS4> sunits_corr { get; set; } = new SHDataSet<GoodsBaseOutputDS4>();
+        public SHDataSet<GoodsBaseSUnitsCorrDS> sunits_corr { get; set; } = new SHDataSet<GoodsBaseSUnitsCorrDS>();
 
         [SHDataSetMeta(DSIndex = 5)]
-        public SHDataSet<GoodsBaseOutputDS5> complects { get; set; } = new SHDataSet<GoodsBaseOutputDS5>();
+        public SHDataSet<GoodsBaseComplectsDS> complects { get; set; } = new SHDataSet<GoodsBaseComplectsDS>();
 
         [SHDataSetMeta(DSIndex = 6)]
-        public SHDataSet<GoodsBaseOutputDS6> complects_base { get; set; } = new SHDataSet<GoodsBaseOutputDS6>();
+        public SHDataSet<GoodsBaseComplectsBaseDS> complects_base { get; set; } = new SHDataSet<GoodsBaseComplectsBaseDS>();
 
         [SHDataSetMeta(DSIndex = 7)]
-        public SHDataSet<GoodsBaseOutputDS7> prices { get; set; } = new SHDataSet<GoodsBaseOutputDS7>();
+        public SHDataSet<GoodsBasePricesDS> prices { get; set; } = new SHDataSet<GoodsBasePricesDS>();
 
         [SHDataSetMeta(DSIndex = 8)]
-        public SHDataSet<GoodsBaseOutputDS8> clfr { get; set; } = new SHDataSet<GoodsBaseOutputDS8>();
+        public SHDataSet<GoodsBaseClfrDS> clfr { get; set; } = new SHDataSet<GoodsBaseClfrDS>();
     }
 
     [SHDataSetMeta(DSIndex = 0)]
@@ -46,7 +46,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public partial class GoodsBaseOutputDS1
+    public partial class GoodsBaseAttrsDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "210.1.0")]
         public uint goods_rid { get; set; }
@@ -158,7 +158,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 2)]
-    public partial class GoodsBaseOutputDS2
+    public partial class GoodsBaseUnitsDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "206.1.0")]
         public uint goods_munit_rid { get; set; }
@@ -186,7 +186,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 3)]
-    public partial class GoodsBaseOutputDS3
+    public partial class GoodsBaseCorrDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "102.1.0")]
         public uint corr_base_rid { get; set; }
@@ -202,7 +202,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 4)]
-    public partial class GoodsBaseOutputDS4
+    public partial class GoodsBaseSUnitsCorrDS
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "214.1.0")]
@@ -219,7 +219,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 5)]
-    public partial class GoodsBaseOutputDS5
+    public partial class GoodsBaseComplectsDS
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "200.1.0")]
@@ -239,7 +239,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 6)]
-    public partial class GoodsBaseOutputDS6
+    public partial class GoodsBaseComplectsBaseDS
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "217.1.0")]
@@ -250,7 +250,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 7)]
-    public partial class GoodsBaseOutputDS7
+    public partial class GoodsBasePricesDS
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "217.1.0")]
@@ -261,7 +261,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 8)]
-    public partial class GoodsBaseOutputDS8
+    public partial class GoodsBaseClfrDS
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "245.1.0")]

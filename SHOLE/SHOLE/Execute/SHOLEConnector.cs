@@ -42,6 +42,11 @@ namespace SHOLE.Execute
             return Connected;
         }
 
+        public string LastError()
+        {
+            return ShConnector.GetExcMessage();
+        }
+
         public void Disconnect()
         {
             ShConnector.DBLogout();

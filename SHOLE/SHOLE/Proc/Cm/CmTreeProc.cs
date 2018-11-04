@@ -7,11 +7,11 @@ namespace SHOLE.Procs
     public partial class CmTreeProc : Execute.SHProc
     {
         [SHDataSetMeta(DSIndex = 1)]
-        public SHDataSet<CmTreeProcOutputDS> result { get; set; } = new SHDataSet<CmTreeProcOutputDS>();
+        public SHDataSet<CmTreeDS> result { get; set; } = new SHDataSet<CmTreeDS>();
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public partial class CmTreeProcOutputDS
+    public partial class CmTreeDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "201.1.0")]
         public uint cm_tree_rid { get; set; }

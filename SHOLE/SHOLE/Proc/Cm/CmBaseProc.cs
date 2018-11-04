@@ -10,7 +10,7 @@ namespace SHOLE.Procs
         public CmBaseProcInputDS Input { get; set; }
 
         [SHDataSetMeta(DSIndex = 1)]
-        public SHDataSet<CmBaseProcOutputDS> result { get; set; } = new SHDataSet<CmBaseProcOutputDS>();
+        public SHDataSet<CmBaseDS> result { get; set; } = new SHDataSet<CmBaseDS>();
     }
 
     [SHDataSetMeta(DSIndex = 0)]
@@ -21,7 +21,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public partial class CmBaseProcOutputDS
+    public partial class CmBaseDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "200.1.0")]
         public uint cm_base_rid { get; set; }

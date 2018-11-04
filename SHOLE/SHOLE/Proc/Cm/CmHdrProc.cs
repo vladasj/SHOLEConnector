@@ -11,16 +11,16 @@ namespace SHOLE.Procs
         public CmHdrProcInputDS input { get; set; }
 
         [SHDataSetMeta(DSIndex = 1)]
-        public SHDataSet<CmHdrProcOutputDS1> cm_hdr_attr { get; set; } = new SHDataSet<CmHdrProcOutputDS1>();
+        public SHDataSet<CmHdrAttrsDS> cm_hdr_attr { get; set; } = new SHDataSet<CmHdrAttrsDS>();
 
         [SHDataSetMeta(DSIndex = 2)]
-        public SHDataSet<CmHdrProcOutputDS2> versions { get; set; } = new SHDataSet<CmHdrProcOutputDS2>();
+        public SHDataSet<CmHdrVersionsDS> versions { get; set; } = new SHDataSet<CmHdrVersionsDS>();
 
         [SHDataSetMeta(DSIndex = 3)]
-        public SHDataSet<CmHdrProcOutputDS3> inplace_since { get; set; } = new SHDataSet<CmHdrProcOutputDS3>();
+        public SHDataSet<CmHdrInPlaceSinceDS> inplace_since { get; set; } = new SHDataSet<CmHdrInPlaceSinceDS>();
 
         [SHDataSetMeta(DSIndex = 4)]
-        public SHDataSet<CmHdrProcOutputDS4> complects { get; set; } = new SHDataSet<CmHdrProcOutputDS4>();
+        public SHDataSet<CmHdrComplectsDS> complects { get; set; } = new SHDataSet<CmHdrComplectsDS>();
     }
 
     [SHDataSetMeta(DSIndex = 0)]
@@ -37,7 +37,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public partial class CmHdrProcOutputDS1
+    public partial class CmHdrAttrsDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "200.1.0")]
         public uint cm_hdr_rid { get; set; }
@@ -92,7 +92,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 2)]
-    public partial class CmHdrProcOutputDS2
+    public partial class CmHdrVersionsDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "202.1.10")]
         public uint cm_version_rid { get; set; }
@@ -106,7 +106,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 3)]
-    public partial class CmHdrProcOutputDS3
+    public partial class CmHdrInPlaceSinceDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "202.1.0")]
         public int cm_hdr_rid { get; set; }
@@ -125,7 +125,7 @@ namespace SHOLE.Procs
     }
 
     [SHDataSetMeta(DSIndex = 4)]
-    public partial class CmHdrProcOutputDS4
+    public partial class CmHdrComplectsDS
     {
 
         [SHDataSetPropertyMeta(PropertyCode = "203.1.0")]

@@ -10,21 +10,21 @@ namespace SHOLE.Procs
         public GoodsProcInputDS input { get; set; } = new GoodsProcInputDS();
 
         [SHDataSetMeta(DSIndex = 1)]
-        public SHDataSet<GoodsProcOutputDS> result { get; set; } = new SHDataSet<GoodsProcOutputDS>();
+        public SHDataSet<GoodsAttrsDS> goodsAttrsDS { get; set; } = new SHDataSet<GoodsAttrsDS>();
     }
 
     [SHDataSetMeta(DSIndex = 0)]
     public partial class GoodsProcInputDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "209.1.0")]
-        public int goodstree_rid { get; set; }
+        public uint goodstree_rid { get; set; }
 
         [SHDataSetPropertyMeta(PropertyCode = "209.2.0")]
         public int goodstree_someparam { get; set; } = 0;
     }
 
     [SHDataSetMeta(DSIndex = 1)]
-    public partial class GoodsProcOutputDS
+    public partial class GoodsAttrsDS
     {
         [SHDataSetPropertyMeta(PropertyCode = "210.1.0")]
         public uint goods_rid { get; set; }
